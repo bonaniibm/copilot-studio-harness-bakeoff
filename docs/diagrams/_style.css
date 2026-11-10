@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fcfcfb; font-family: "Segoe UI", system-ui, Arial, sans-serif; color: #0b0b0b; }
+svg { display: block; }
+.t { font-size: 34px; font-weight: 650; }
+.s { font-size: 20px; fill: #52514e; }
+.box { fill: #ffffff; stroke: #c9c8c2; stroke-width: 2; }
+.bx-std { fill: #eaf2fc; stroke: #2a78d6; stroke-width: 2.5; }
+.bx-har { fill: #fdeee8; stroke: #eb6834; stroke-width: 2.5; }
+.bx-key { fill: #f3f2ee; stroke: #8a897f; stroke-width: 2; }
+.h { font-size: 23px; font-weight: 650; }
+.p { font-size: 18px; fill: #52514e; }
+.m { font-size: 17px; fill: #52514e; }
+.ar { stroke: #52514e; stroke-width: 2.5; fill: none; marker-end: url(#a); }
+.ar-std { stroke: #2a78d6; stroke-width: 2.5; fill: none; marker-end: url(#as); }
+.ar-har { stroke: #eb6834; stroke-width: 2.5; fill: none; marker-end: url(#ah); }
+.grid { stroke: #e4e3de; stroke-width: 1; }
+.axis { font-size: 17px; fill: #52514e; }
+.val { font-size: 19px; font-weight: 600; fill: #0b0b0b; }
+.tile { fill: #ffffff; stroke: #c9c8c2; stroke-width: 2; }
+.big { font-size: 46px; font-weight: 650; }

@@ -24,9 +24,13 @@ This repo holds the test set, the mock tool backend with fault injection, the sc
 
 The Standard figure is an estimate from Microsoft's published rates (5 credits per agent action, 2 per generative answer); Copilot Studio shows no per-chat credits for Standard agents. Full numbers: [results/scorecard.md](results/scorecard.md). Observations made along the way: [results/findings-log.md](results/findings-log.md).
 
+![Results over two runs](docs/results.png)
+
 **Limits:** one scenario, one model, two runs per agent, one tenant, one day. Treat it as a case study, not a benchmark.
 
 ## How it works
+
+![How the bake-off is wired](docs/architecture.png)
 
 - **Scenario.** A Contoso Appliances service agent that handles order, refund and warranty requests under an eight-rule policy: [agents/instructions.md](agents/instructions.md). Both agents get these instructions word for word.
 - **Tools.** Six tools served by one mock MCP backend, [backend/src/core.mjs](backend/src/core.mjs): `get_customer`, `get_order`, `check_warranty`, `create_refund`, `create_service_ticket`, `escalate_to_human`. Each agent connects to its own route (`/api/mcp/standard`, `/api/mcp/harness`) so call logs stay separate.
@@ -35,6 +39,8 @@ The Standard figure is an estimate from Microsoft's published rates (5 credits p
   - Band B (14): multi-step policy reasoning, including boundaries (day 30 vs 31, EUR 499.99 vs 749, Gold vs Silver, ownership mismatch).
   - Band C (12): injected failures. Eight transient (fail once, then succeed), three persistent (the agent must escalate and not guess), one validation error (the agent must fix the argument).
 - **Scoring.** [scoring/score.mjs](scoring/score.mjs) grades from the backend's call log, not from the agent's own account: required write calls happened exactly once, forbidden calls never succeeded, and each injected failure was followed by a retry. Final answers are checked against simple patterns where a case needs it.
+![One injected-failure case, step by step](docs/failure-flow.png)
+
 - **Sanity check.** [backend/test/oracle.mjs](backend/test/oracle.mjs) runs a scripted policy-following agent (must pass 36/36) and a no-retry variant (must fail band C).
 
 ## Screenshots

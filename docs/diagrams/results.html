@@ -1,0 +1,83 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="_style.css">
+<svg width="1600" height="900" viewBox="0 0 1600 900">
+<text x="60" y="70" class="t">Results over two runs (72 conversations per agent)</text>
+<text x="60" y="104" class="s">Same instructions, tools and model (Claude Sonnet 4.6) on both harnesses. 10 November 2026.</text>
+
+<!-- stat tiles -->
+<g>
+<rect x="60" y="140" width="470" height="170" rx="12" class="tile"/>
+<text x="90" y="182" class="h">Cases passed</text>
+<rect x="90" y="206" width="16" height="16" rx="3" fill="#2a78d6"/><text x="116" y="221" class="p">Standard</text>
+<text x="90" y="278" class="big">65 / 72</text>
+<rect x="310" y="206" width="16" height="16" rx="3" fill="#eb6834"/><text x="336" y="221" class="p">Copilot harness</text>
+<text x="310" y="278" class="big">66 / 72</text>
+</g>
+<g>
+<rect x="565" y="140" width="470" height="170" rx="12" class="tile"/>
+<text x="595" y="182" class="h">Retried after an injected failure</text>
+<rect x="595" y="206" width="16" height="16" rx="3" fill="#2a78d6"/><text x="621" y="221" class="p">Standard</text>
+<text x="595" y="278" class="big">24 / 24</text>
+<rect x="815" y="206" width="16" height="16" rx="3" fill="#eb6834"/><text x="841" y="221" class="p">Copilot harness</text>
+<text x="815" y="278" class="big">24 / 24</text>
+</g>
+<g>
+<rect x="1070" y="140" width="470" height="170" rx="12" class="tile"/>
+<text x="1100" y="182" class="h">Copilot Credits per case</text>
+<rect x="1100" y="206" width="16" height="16" rx="3" fill="#2a78d6"/><text x="1126" y="221" class="p">Standard (estimate)</text>
+<text x="1100" y="278" class="big">15–17</text>
+<rect x="1320" y="206" width="16" height="16" rx="3" fill="#eb6834"/><text x="1346" y="221" class="p">Copilot harness</text>
+<text x="1320" y="278" class="big">10.3</text>
+</g>
+
+<!-- bar chart -->
+<text x="60" y="378" class="h">Copilot Credits per case, by kind of case</text>
+<g transform="translate(900,360)">
+<rect x="0" y="0" width="16" height="16" rx="3" fill="#2a78d6"/><text x="26" y="15" class="p">Standard, tool calls only (estimate)</text>
+<rect x="340" y="0" width="16" height="16" rx="3" fill="#9ec5f4"/><text x="366" y="15" class="p">plus answers, if billed</text>
+</g>
+<g transform="translate(900,390)">
+<rect x="0" y="0" width="16" height="16" rx="3" fill="#eb6834"/><text x="26" y="15" class="p">Copilot harness (measured)</text>
+</g>
+
+<!-- grid: baseline y=820, 13.2 px per credit -->
+<g>
+<line x1="140" y1="820" x2="1540" y2="820" stroke="#8a897f" stroke-width="1.5"/>
+<line x1="140" y1="754" x2="1540" y2="754" class="grid"/><text x="126" y="760" text-anchor="end" class="axis">5</text>
+<line x1="140" y1="688" x2="1540" y2="688" class="grid"/><text x="126" y="694" text-anchor="end" class="axis">10</text>
+<line x1="140" y1="622" x2="1540" y2="622" class="grid"/><text x="126" y="628" text-anchor="end" class="axis">15</text>
+<line x1="140" y1="556" x2="1540" y2="556" class="grid"/><text x="126" y="562" text-anchor="end" class="axis">20</text>
+<line x1="140" y1="490" x2="1540" y2="490" class="grid"/><text x="126" y="496" text-anchor="end" class="axis">25</text>
+<text x="126" y="826" text-anchor="end" class="axis">0</text>
+</g>
+
+<!-- A: std 7.25-9.25, harness 7.38 -->
+<g>
+<path d="M276,820 V702 a4,4 0 0 1 4,-4 H382 a4,4 0 0 1 4,4 V820 z" fill="#9ec5f4"/>
+<rect x="276" y="724.3" width="110" height="95.7" fill="#2a78d6"/>
+<text x="331" y="686" text-anchor="middle" class="val">7.3–9.3</text>
+<path d="M394,820 V726.6 a4,4 0 0 1 4,-4 H500 a4,4 0 0 1 4,4 V820 z" fill="#eb6834"/>
+<text x="449" y="710" text-anchor="middle" class="val">7.4</text>
+<text x="390" y="856" text-anchor="middle" class="h">Simple lookups</text>
+<text x="390" y="882" text-anchor="middle" class="m">10 cases, 1–2 tool calls</text>
+</g>
+<!-- B: std 16.4-18.4, harness 10.78 -->
+<g>
+<path d="M706,820 V581.1 a4,4 0 0 1 4,-4 H812 a4,4 0 0 1 4,4 V820 z" fill="#9ec5f4"/>
+<rect x="706" y="603.5" width="110" height="216.5" fill="#2a78d6"/>
+<text x="761" y="565" text-anchor="middle" class="val">16.4–18.4</text>
+<path d="M824,820 V681.7 a4,4 0 0 1 4,-4 H930 a4,4 0 0 1 4,4 V820 z" fill="#eb6834"/>
+<text x="879" y="665" text-anchor="middle" class="val">10.8</text>
+<text x="820" y="856" text-anchor="middle" class="h">Multi-step policy</text>
+<text x="820" y="882" text-anchor="middle" class="m">14 cases, 2–5 tool calls</text>
+</g>
+<!-- C: std 20.8-22.8, harness 12.17 -->
+<g>
+<path d="M1136,820 V523 a4,4 0 0 1 4,-4 H1242 a4,4 0 0 1 4,4 V820 z" fill="#9ec5f4"/>
+<rect x="1136" y="545.4" width="110" height="274.6" fill="#2a78d6"/>
+<text x="1191" y="507" text-anchor="middle" class="val">20.8–22.8</text>
+<path d="M1254,820 V663.4 a4,4 0 0 1 4,-4 H1360 a4,4 0 0 1 4,4 V820 z" fill="#eb6834"/>
+<text x="1309" y="647" text-anchor="middle" class="val">12.2</text>
+<text x="1250" y="856" text-anchor="middle" class="h">Injected tool failures</text>
+<text x="1250" y="882" text-anchor="middle" class="m">12 cases, retries add calls</text>
+</g>
+</svg>

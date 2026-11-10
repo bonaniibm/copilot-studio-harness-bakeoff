@@ -6,11 +6,19 @@ The choice is permanent. An agent cannot move between harnesses; switching means
 
 I built the same customer service agent on both harnesses and ran it through the same 36 test cases, twice. The scores tied. The bill did not.
 
+![Figure 1. Results over two runs: pass counts, retries after injected failures, and Copilot Credits per case.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/results.png)
+
 ## The setup
 
 **One agent, built twice.** A customer service agent for a fictional appliance retailer. It handles order, refund and warranty requests under an eight-rule policy: who owns the order, a 30-day refund window (45 for Gold customers), a EUR 500 approval limit, what to do when a system is down. Both agents got the same instructions word for word, the same model (Claude Sonnet 4.6), and no knowledge sources.
 
+![Figure 3. The Copilot harness agent: instructions, model and the single MCP tool.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/harness-agent-setup.jpg)
+
+![Figure 4. The Standard harness agent with the same instructions and model.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/standard-agent-setup.jpg)
+
 **One backend, six tools.** Both agents call the same mock service through an MCP server: look up a customer, look up an order, check a warranty, issue a refund, open a repair ticket, escalate to a human. The backend can fail on purpose. For chosen orders, a tool fails once and then works, or fails every time.
+
+![Figure 2. How the bake-off is wired. Each agent calls the same mock backend through its own route, and scoring reads the backend log.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/architecture.png)
 
 **36 test cases in three bands.**
 
@@ -36,6 +44,12 @@ Microsoft's published data says agents on the Copilot harness kept trying after 
 
 I did not see that gap. Both agents retried after every injected failure: 24 out of 24 each. Both issued exactly one refund when the refund tool failed the first time. Both escalated to a human, without claiming success, when a system stayed down.
 
+![Figure 5. One injected-failure case, step by step.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/failure-flow.png)
+
+![Figure 6. Recording: the Copilot harness agent hits the injected failure, retries, and issues the refund.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/demo.gif)
+
+![Figure 7. The end of that conversation in the Preview chat, with the live credit counter at 10.69.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/harness-preview-chat.jpg)
+
 Two things probably explain the difference. My instructions say plainly "if a system is unavailable, try again; if it still fails, escalate". And I used the same model on both sides, while Microsoft's telemetry covers many agents with many configurations. The practical lesson is that a clear retry rule in the instructions was enough on either harness.
 
 ## Finding 3: the cost has a different shape
@@ -54,6 +68,8 @@ So lookup-heavy agents favour Standard, and agents that chain several tool calls
 ## Finding 4: the live credit counter understates
 
 The Preview chat shows a running credit count. Every single Copilot harness conversation showed about 4.2 more credits on the History page a few minutes after it ended. For a one-tool lookup, that delayed charge was roughly two thirds of the total. I could not determine what it is for. If you are budgeting from the live counter, you are under-counting.
+
+![Figure 8. The History page shows the final credits per conversation, about 4.2 higher than the live counter.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/harness-history-credits.jpg)
 
 ## Finding 5: credits gate the new harness before the first message
 

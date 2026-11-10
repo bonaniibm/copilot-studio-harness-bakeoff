@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="_style.css">
+<svg width="1600" height="860" viewBox="0 0 1600 860">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#52514e"/></marker>
+</defs>
+<text x="60" y="70" class="t">One injected-failure case, step by step</text>
+<text x="60" y="104" class="s">Case C01: the order system fails on the first call. The agent must retry, apply the policy, and issue exactly one refund.</text>
+
+<rect x="110" y="140" width="260" height="56" rx="10" class="bx-key"/><text x="240" y="176" text-anchor="middle" class="h">Customer</text>
+<rect x="670" y="140" width="260" height="56" rx="10" class="bx-key"/><text x="800" y="176" text-anchor="middle" class="h">Agent</text>
+<rect x="1230" y="140" width="260" height="56" rx="10" class="bx-key"/><text x="1360" y="176" text-anchor="middle" class="h">Mock backend (MCP)</text>
+<line x1="240" y1="196" x2="240" y2="760" stroke="#c9c8c2" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="800" y1="196" x2="800" y2="760" stroke="#c9c8c2" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="1360" y1="196" x2="1360" y2="760" stroke="#c9c8c2" stroke-width="2" stroke-dasharray="6 6"/>
+
+<path d="M240,250 L796,250" class="ar"/><text x="520" y="238" text-anchor="middle" class="p">"I am C-141. Order ORD-241 arrived defective, please refund me."</text>
+
+<path d="M800,320 L1356,320" class="ar"/><text x="1080" y="308" text-anchor="middle" class="p">get_customer(C-141)   →   Silver tier</text>
+
+<path d="M800,390 L1356,390" class="ar"/><text x="1080" y="378" text-anchor="middle" class="p">get_order(ORD-241)</text>
+<rect x="1150" y="400" width="420" height="40" rx="8" fill="#fbe9e9" stroke="#b8322f" stroke-width="2"/><text x="1360" y="427" text-anchor="middle" class="p" style="fill:#7a1f1d">✕  503: system unavailable (injected)</text>
+
+<path d="M800,490 L1356,490" class="ar"/><text x="1080" y="478" text-anchor="middle" class="p">get_order(ORD-241), second attempt   →   delivered 7 days ago, EUR 99</text>
+
+<rect x="560" y="520" width="480" height="64" rx="10" class="box"/>
+<text x="800" y="548" text-anchor="middle" class="p">Policy check: owner matches, inside 30 days,</text>
+<text x="800" y="572" text-anchor="middle" class="p">defective, under the EUR 500 limit</text>
+
+<path d="M800,640 L1356,640" class="ar"/><text x="1080" y="628" text-anchor="middle" class="p">create_refund(ORD-241, 99)   →   refund issued</text>
+
+<path d="M800,710 L244,710" class="ar"/><text x="520" y="698" text-anchor="middle" class="p">"Your refund of EUR 99 has been issued, reference RF-…"</text>
+
+<rect x="60" y="780" width="1480" height="56" rx="10" class="bx-key"/>
+<text x="90" y="816" class="h">Pass means:</text>
+<text x="250" y="816" class="p">the backend log shows one successful create_refund for ORD-241 at EUR 99, no forbidden call, and a second get_order after the failure.</text>
+</svg>

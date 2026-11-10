@@ -1,0 +1,64 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="_style.css">
+<svg width="1600" height="820" viewBox="0 0 1600 820">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#52514e"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2a78d6"/></marker>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#eb6834"/></marker>
+</defs>
+<text x="60" y="70" class="t">How the bake-off is wired</text>
+<text x="60" y="104" class="s">Same test cases, same instructions, same model, same tools. Only the harness differs. Scoring reads the backend log, not the agent reply.</text>
+
+<rect x="60" y="300" width="230" height="200" rx="12" class="bx-key"/>
+<text x="175" y="350" text-anchor="middle" class="h">36 test cases</text>
+<text x="175" y="386" text-anchor="middle" class="p">10 simple lookups</text>
+<text x="175" y="414" text-anchor="middle" class="p">14 multi-step policy</text>
+<text x="175" y="442" text-anchor="middle" class="p">12 injected failures</text>
+<text x="175" y="476" text-anchor="middle" class="m">one fresh chat per case</text>
+
+<rect x="400" y="180" width="330" height="170" rx="12" class="bx-std"/>
+<text x="565" y="228" text-anchor="middle" class="h">Standard harness agent</text>
+<text x="565" y="264" text-anchor="middle" class="p">Same 8-rule policy instructions</text>
+<text x="565" y="292" text-anchor="middle" class="p">Claude Sonnet 4.6</text>
+<text x="565" y="320" text-anchor="middle" class="p">Copilot Studio test chat</text>
+
+<rect x="400" y="450" width="330" height="170" rx="12" class="bx-har"/>
+<text x="565" y="498" text-anchor="middle" class="h">Copilot harness agent</text>
+<text x="565" y="534" text-anchor="middle" class="p">Same 8-rule policy instructions</text>
+<text x="565" y="562" text-anchor="middle" class="p">Claude Sonnet 4.6</text>
+<text x="565" y="590" text-anchor="middle" class="p">Copilot Studio Preview chat</text>
+
+<path d="M290,370 C340,370 350,265 398,265" class="ar"/>
+<path d="M290,430 C340,430 350,535 398,535" class="ar"/>
+
+<rect x="850" y="250" width="330" height="300" rx="12" class="box"/>
+<text x="1015" y="298" text-anchor="middle" class="h">Mock service backend (MCP)</text>
+<text x="1015" y="336" text-anchor="middle" class="p">get_customer · get_order</text>
+<text x="1015" y="364" text-anchor="middle" class="p">check_warranty · create_refund</text>
+<text x="1015" y="392" text-anchor="middle" class="p">create_service_ticket</text>
+<text x="1015" y="420" text-anchor="middle" class="p">escalate_to_human</text>
+<line x1="880" y1="446" x2="1150" y2="446" stroke="#c9c8c2" stroke-width="2"/>
+<text x="1015" y="482" text-anchor="middle" class="p">Fault injection per order:</text>
+<text x="1015" y="510" text-anchor="middle" class="p">fail once, or fail every time</text>
+
+<path d="M730,265 C790,265 790,330 848,330" class="ar-std"/>
+<text x="742" y="246" class="m">/api/mcp/standard</text>
+<path d="M730,535 C790,535 790,470 848,470" class="ar-har"/>
+<text x="742" y="574" class="m">/api/mcp/harness</text>
+
+<rect x="1290" y="180" width="250" height="150" rx="12" class="box"/>
+<text x="1415" y="228" text-anchor="middle" class="h">Call log per agent</text>
+<text x="1415" y="264" text-anchor="middle" class="p">every tool call, its</text>
+<text x="1415" y="292" text-anchor="middle" class="p">arguments and outcome</text>
+
+<rect x="1290" y="470" width="250" height="150" rx="12" class="bx-key"/>
+<text x="1415" y="518" text-anchor="middle" class="h">Scorer</text>
+<text x="1415" y="554" text-anchor="middle" class="p">right action, exactly once;</text>
+<text x="1415" y="582" text-anchor="middle" class="p">retry after each failure</text>
+
+<path d="M1180,330 C1240,330 1240,255 1288,255" class="ar"/>
+<path d="M1415,330 L1415,468" class="ar"/>
+
+<rect x="400" y="690" width="1140" height="80" rx="12" class="box"/>
+<text x="430" y="738" class="h">Credits</text>
+<text x="540" y="738" class="p">Copilot harness: measured per conversation on the History page.   Standard: estimated from published list rates.</text>
+</svg>
