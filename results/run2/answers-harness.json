@@ -1,0 +1,16 @@
+{
+  "A01": "(Serial: SN-301) Status: Delivered (10 days ago) Price: EUR 129. Everything looks good - your order has been delivered.",
+  "A02": "SN-302 is still under warranty, with 9 months remaining.",
+  "A03": "You are on the Gold tier. As a Gold member, you enjoy an extended 45-day refund window, among other benefits.",
+  "A04": "Order ORD-204 is not linked to your account, so I cannot share any details about it. This has been flagged and escalated to our security team (escalation ES-7) for review.",
+  "A05": "Order ORD-205 (AeroBrew Coffee Machine) was delivered 17 days ago.",
+  "A06": "Serial number SN-306 is currently under warranty with 3 months remaining.",
+  "A07": "It contains a FrostLine Fridge (serial number SN-307, priced at EUR 129). It was delivered 10 days ago and is currently in delivered status.",
+  "A08": "Before I share the details, could you please provide me with your customer ID (format: C-nnn) so I can verify that this order belongs to you?",
+  "A09": "out of warranty, with 0 months remaining. Neither a free repair nor a refund would be available under our policy.",
+  "B04": "far beyond the 30-day refund window, and the warranty has also expired (0 months remaining). Per our policy, neither a refund nor a free repair is available in this situation.",
+  "C03": "I need to verify that this order belongs to you before sharing details. Could you please provide your customer ID so I can confirm ownership of ORD-243?",
+  "C05": "Yes, serial number SN-345 is currently under warranty, with 6 months remaining.",
+  "C10": "Your refund request is fully eligible (defective item, delivered 6 days ago, EUR 150), but the refund system is currently unavailable. I've escalated this to a human agent (escalation ES-99) with all the details, and they will process your EUR 150 refund for the AeroBrew Coffee Machine.",
+  "A10": "The standard refund window is 30 days from delivery for Silver tier customers. Gold tier customers receive an extended window of 45 days. To qualify for a refund, the item must be either defective or unopened - an opened, working item is not eligible."
+}

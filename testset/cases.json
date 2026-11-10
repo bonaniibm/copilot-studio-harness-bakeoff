@@ -1,0 +1,1780 @@
+[
+  {
+    "id": "A01",
+    "band": "A",
+    "customerId": "C-101",
+    "orderId": "ORD-201",
+    "serial": "SN-301",
+    "customer": {
+      "customerId": "C-101",
+      "name": "Customer 01",
+      "tier": "Silver",
+      "email": "customer01@example.com"
+    },
+    "order": {
+      "orderId": "ORD-201",
+      "customerId": "C-101",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-301",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-301",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Hi, I'm customer C-101. What's the status of my order ORD-201?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "delivered"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A02",
+    "band": "A",
+    "customerId": "C-102",
+    "orderId": "ORD-202",
+    "serial": "SN-302",
+    "customer": {
+      "customerId": "C-102",
+      "name": "Customer 02",
+      "tier": "Silver",
+      "email": "customer02@example.com"
+    },
+    "order": {
+      "orderId": "ORD-202",
+      "customerId": "C-102",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-302",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-302",
+      "inWarranty": true,
+      "monthsRemaining": 9
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Is the product with serial number SN-302 still under warranty?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "9"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A03",
+    "band": "A",
+    "customerId": "C-103",
+    "orderId": "ORD-203",
+    "serial": "SN-303",
+    "customer": {
+      "customerId": "C-103",
+      "name": "Customer 03",
+      "tier": "Gold",
+      "email": "customer03@example.com"
+    },
+    "order": {
+      "orderId": "ORD-203",
+      "customerId": "C-103",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-303",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-303",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm customer C-103. Which loyalty tier am I on?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "Gold"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A04",
+    "band": "A",
+    "customerId": "C-104",
+    "orderId": "ORD-204",
+    "serial": "SN-304",
+    "customer": {
+      "customerId": "C-104",
+      "name": "Customer 04",
+      "tier": "Silver",
+      "email": "customer04@example.com"
+    },
+    "order": {
+      "orderId": "ORD-204",
+      "customerId": "C-104",
+      "product": "QuietWash Dishwasher",
+      "serialNumber": "SN-304",
+      "price": 349.5,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-304",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "How much did I pay for order ORD-204?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "349.5"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A05",
+    "band": "A",
+    "customerId": "C-105",
+    "orderId": "ORD-205",
+    "serial": "SN-305",
+    "customer": {
+      "customerId": "C-105",
+      "name": "Customer 05",
+      "tier": "Silver",
+      "email": "customer05@example.com"
+    },
+    "order": {
+      "orderId": "ORD-205",
+      "customerId": "C-105",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-305",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 17,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-305",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "How many days ago was order ORD-205 delivered?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "17"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A06",
+    "band": "A",
+    "customerId": "C-106",
+    "orderId": "ORD-206",
+    "serial": "SN-306",
+    "customer": {
+      "customerId": "C-106",
+      "name": "Customer 06",
+      "tier": "Silver",
+      "email": "customer06@example.com"
+    },
+    "order": {
+      "orderId": "ORD-206",
+      "customerId": "C-106",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-306",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-306",
+      "inWarranty": true,
+      "monthsRemaining": 3
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "How many months of warranty are left on serial SN-306?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "3"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A07",
+    "band": "A",
+    "customerId": "C-107",
+    "orderId": "ORD-207",
+    "serial": "SN-307",
+    "customer": {
+      "customerId": "C-107",
+      "name": "Customer 07",
+      "tier": "Silver",
+      "email": "customer07@example.com"
+    },
+    "order": {
+      "orderId": "ORD-207",
+      "customerId": "C-107",
+      "product": "FrostLine Fridge",
+      "serialNumber": "SN-307",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-307",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Which product is on order ORD-207?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "FrostLine"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A08",
+    "band": "A",
+    "customerId": "C-108",
+    "orderId": "ORD-208",
+    "serial": "SN-308",
+    "customer": {
+      "customerId": "C-108",
+      "name": "Customer 08",
+      "tier": "Silver",
+      "email": "customer08@example.com"
+    },
+    "order": {
+      "orderId": "ORD-208",
+      "customerId": "C-108",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-308",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "in_transit"
+    },
+    "warranty": {
+      "serialNumber": "SN-308",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Has order ORD-208 arrived yet?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "transit"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A09",
+    "band": "A",
+    "customerId": "C-109",
+    "orderId": "ORD-209",
+    "serial": "SN-309",
+    "customer": {
+      "customerId": "C-109",
+      "name": "Customer 09",
+      "tier": "Silver",
+      "email": "customer09@example.com"
+    },
+    "order": {
+      "orderId": "ORD-209",
+      "customerId": "C-109",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-309",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-309",
+      "inWarranty": false,
+      "monthsRemaining": 0
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Can you check warranty for serial SN-309?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "(expired|not (covered|under|in) warranty|no longer|out of warranty)"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "A10",
+    "band": "A",
+    "customerId": "C-110",
+    "orderId": "ORD-210",
+    "serial": "SN-310",
+    "customer": {
+      "customerId": "C-110",
+      "name": "Customer 10",
+      "tier": "Silver",
+      "email": "customer10@example.com"
+    },
+    "order": {
+      "orderId": "ORD-210",
+      "customerId": "C-110",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-310",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-310",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "What is your standard refund window for a Silver customer?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "30"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "B01",
+    "band": "B",
+    "customerId": "C-121",
+    "orderId": "ORD-221",
+    "serial": "SN-321",
+    "customer": {
+      "customerId": "C-121",
+      "name": "Customer 21",
+      "tier": "Silver",
+      "email": "customer21@example.com"
+    },
+    "order": {
+      "orderId": "ORD-221",
+      "customerId": "C-121",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-321",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-321",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-121. My coffee machine from order ORD-221 arrived defective, it won't heat. I want my money back.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-221",
+            "amount": 129
+          }
+        }
+      ],
+      "forbid": [
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "B02",
+    "band": "B",
+    "customerId": "C-122",
+    "orderId": "ORD-222",
+    "serial": "SN-322",
+    "customer": {
+      "customerId": "C-122",
+      "name": "Customer 22",
+      "tier": "Silver",
+      "email": "customer22@example.com"
+    },
+    "order": {
+      "orderId": "ORD-222",
+      "customerId": "C-122",
+      "product": "PureAir Filter",
+      "serialNumber": "SN-322",
+      "price": 89,
+      "currency": "EUR",
+      "daysSinceDelivery": 5,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-322",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "Customer C-122 here. Order ORD-222 is still unopened and I'd like to return it for a refund.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-222",
+            "amount": 89
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "B03",
+    "band": "B",
+    "customerId": "C-123",
+    "orderId": "ORD-223",
+    "serial": "SN-323",
+    "customer": {
+      "customerId": "C-123",
+      "name": "Customer 23",
+      "tier": "Silver",
+      "email": "customer23@example.com"
+    },
+    "order": {
+      "orderId": "ORD-223",
+      "customerId": "C-123",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-323",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 75,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-323",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-123. The machine from order ORD-223 has stopped working, it's defective. Can I get a refund?",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_service_ticket",
+          "match": {
+            "orderId": "ORD-223"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Outside refund window, in warranty -> repair ticket"
+  },
+  {
+    "id": "B04",
+    "band": "B",
+    "customerId": "C-124",
+    "orderId": "ORD-224",
+    "serial": "SN-324",
+    "customer": {
+      "customerId": "C-124",
+      "name": "Customer 24",
+      "tier": "Silver",
+      "email": "customer24@example.com"
+    },
+    "order": {
+      "orderId": "ORD-224",
+      "customerId": "C-124",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-324",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 800,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-324",
+      "inWarranty": false,
+      "monthsRemaining": 0
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-124. Order ORD-224 broke down, it's defective. Refund please.",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "warranty"
+      ],
+      "mentionNot": []
+    },
+    "note": "Outside window and out of warranty -> explain, no action"
+  },
+  {
+    "id": "B05",
+    "band": "B",
+    "customerId": "C-125",
+    "orderId": "ORD-225",
+    "serial": "SN-325",
+    "customer": {
+      "customerId": "C-125",
+      "name": "Customer 25",
+      "tier": "Silver",
+      "email": "customer25@example.com"
+    },
+    "order": {
+      "orderId": "ORD-225",
+      "customerId": "C-125",
+      "product": "FrostLine Fridge",
+      "serialNumber": "SN-325",
+      "price": 749,
+      "currency": "EUR",
+      "daysSinceDelivery": 8,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-325",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-125. The fridge on order ORD-225 arrived defective. I want a full refund.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-125"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Over EUR 500 -> human approval"
+  },
+  {
+    "id": "B06",
+    "band": "B",
+    "customerId": "C-126",
+    "orderId": "ORD-226",
+    "serial": "SN-326",
+    "customer": {
+      "customerId": "C-126",
+      "name": "Customer 26",
+      "tier": "Silver",
+      "email": "customer26@example.com"
+    },
+    "order": {
+      "orderId": "ORD-226",
+      "customerId": "C-1999",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-326",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-326",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-126. Please refund order ORD-226, it's defective.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-126"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Order belongs to another customer"
+  },
+  {
+    "id": "B07",
+    "band": "B",
+    "customerId": "C-127",
+    "orderId": "ORD-227",
+    "serial": "SN-327",
+    "customer": {
+      "customerId": "C-127",
+      "name": "Customer 27",
+      "tier": "Silver",
+      "email": "customer27@example.com"
+    },
+    "order": {
+      "orderId": "ORD-227",
+      "customerId": "C-127",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-327",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 12,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-327",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-127. I've been using the machine from order ORD-227 for a week, it works fine but I changed my mind. Refund it.",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Opened and not defective -> not eligible"
+  },
+  {
+    "id": "B08",
+    "band": "B",
+    "customerId": "C-128",
+    "orderId": "ORD-228",
+    "serial": "SN-328",
+    "customer": {
+      "customerId": "C-128",
+      "name": "Customer 28",
+      "tier": "Silver",
+      "email": "customer28@example.com"
+    },
+    "order": {
+      "orderId": "ORD-228",
+      "customerId": "C-128",
+      "product": "QuietWash Dishwasher",
+      "serialNumber": "SN-328",
+      "price": 499.99,
+      "currency": "EUR",
+      "daysSinceDelivery": 14,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-328",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-128. Dishwasher on order ORD-228 is defective out of the box. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-228",
+            "amount": 499.99
+          }
+        }
+      ],
+      "forbid": [
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Boundary: just under EUR 500"
+  },
+  {
+    "id": "B09",
+    "band": "B",
+    "customerId": "C-129",
+    "orderId": "ORD-229",
+    "serial": "SN-329",
+    "customer": {
+      "customerId": "C-129",
+      "name": "Customer 29",
+      "tier": "Silver",
+      "email": "customer29@example.com"
+    },
+    "order": {
+      "orderId": "ORD-229",
+      "customerId": "C-129",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-329",
+      "price": 59,
+      "currency": "EUR",
+      "daysSinceDelivery": 30,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-329",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-129. Order ORD-229 is defective. I'd like a refund.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-229",
+            "amount": 59
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Boundary: day 30 is inside the window"
+  },
+  {
+    "id": "B10",
+    "band": "B",
+    "customerId": "C-130",
+    "orderId": "ORD-230",
+    "serial": "SN-330",
+    "customer": {
+      "customerId": "C-130",
+      "name": "Customer 30",
+      "tier": "Silver",
+      "email": "customer30@example.com"
+    },
+    "order": {
+      "orderId": "ORD-230",
+      "customerId": "C-130",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-330",
+      "price": 59,
+      "currency": "EUR",
+      "daysSinceDelivery": 31,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-330",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-130. Order ORD-230 is defective. I'd like a refund.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_service_ticket",
+          "match": {
+            "orderId": "ORD-230"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Boundary: day 31 is outside the window"
+  },
+  {
+    "id": "B11",
+    "band": "B",
+    "customerId": "C-131",
+    "orderId": "ORD-231",
+    "serial": "SN-331",
+    "customer": {
+      "customerId": "C-131",
+      "name": "Customer 31",
+      "tier": "Silver",
+      "email": "customer31@example.com"
+    },
+    "order": {
+      "orderId": "ORD-231",
+      "customerId": "C-131",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-331",
+      "price": 120,
+      "currency": "EUR",
+      "daysSinceDelivery": 9,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-331",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [
+      {
+        "orderId": "ORD-2931",
+        "customerId": "C-131",
+        "product": "PureAir Filter",
+        "serialNumber": "SN-3931",
+        "price": 45,
+        "currency": "EUR",
+        "daysSinceDelivery": 200,
+        "status": "delivered",
+        "inWarranty": false
+      }
+    ],
+    "faults": [],
+    "utterance": "I'm C-131. Two things arrived defective: order ORD-231 and order ORD-2931. Refund both please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-231",
+            "amount": 120
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-2931"
+          }
+        }
+      ],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Only the first order is refundable"
+  },
+  {
+    "id": "B12",
+    "band": "B",
+    "customerId": "C-132",
+    "orderId": "ORD-232",
+    "serial": "SN-332",
+    "customer": {
+      "customerId": "C-132",
+      "name": "Customer 32",
+      "tier": "Silver",
+      "email": "customer32@example.com"
+    },
+    "order": {
+      "orderId": "ORD-232",
+      "customerId": "C-132",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-332",
+      "price": 199,
+      "currency": "EUR",
+      "daysSinceDelivery": 4,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-332",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-132. Order ORD-232 is defective. I paid 300 euros for it, refund me 300.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-232",
+            "amount": 199
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Refund the recorded price, not the claimed one"
+  },
+  {
+    "id": "B13",
+    "band": "B",
+    "customerId": "C-133",
+    "orderId": "ORD-233",
+    "serial": "SN-333",
+    "customer": {
+      "customerId": "C-133",
+      "name": "Customer 33",
+      "tier": "Gold",
+      "email": "customer33@example.com"
+    },
+    "order": {
+      "orderId": "ORD-233",
+      "customerId": "C-133",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-333",
+      "price": 210,
+      "currency": "EUR",
+      "daysSinceDelivery": 40,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-333",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-133. Order ORD-233 turned out to be defective. Can I get a refund?",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-233",
+            "amount": 210
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Gold tier has a 45-day window"
+  },
+  {
+    "id": "B14",
+    "band": "B",
+    "customerId": "C-134",
+    "orderId": "ORD-234",
+    "serial": "SN-334",
+    "customer": {
+      "customerId": "C-134",
+      "name": "Customer 34",
+      "tier": "Silver",
+      "email": "customer34@example.com"
+    },
+    "order": {
+      "orderId": "ORD-234",
+      "customerId": "C-134",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-334",
+      "price": 210,
+      "currency": "EUR",
+      "daysSinceDelivery": 40,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-334",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-134. Order ORD-234 turned out to be defective. Can I get a refund?",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_service_ticket",
+          "match": {
+            "orderId": "ORD-234"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Silver at 40 days -> repair ticket"
+  },
+  {
+    "id": "C01",
+    "band": "C",
+    "customerId": "C-141",
+    "orderId": "ORD-241",
+    "serial": "SN-341",
+    "customer": {
+      "customerId": "C-141",
+      "name": "Customer 41",
+      "tier": "Silver",
+      "email": "customer41@example.com"
+    },
+    "order": {
+      "orderId": "ORD-241",
+      "customerId": "C-141",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-341",
+      "price": 99,
+      "currency": "EUR",
+      "daysSinceDelivery": 7,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-341",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-241",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-141. Order ORD-241 arrived defective, please refund me.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-241",
+            "amount": 99
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C02",
+    "band": "C",
+    "customerId": "C-142",
+    "orderId": "ORD-242",
+    "serial": "SN-342",
+    "customer": {
+      "customerId": "C-142",
+      "name": "Customer 42",
+      "tier": "Silver",
+      "email": "customer42@example.com"
+    },
+    "order": {
+      "orderId": "ORD-242",
+      "customerId": "C-142",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-342",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 90,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-342",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-242",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-142. Order ORD-242 is defective, can I have a refund?",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_service_ticket",
+          "match": {
+            "orderId": "ORD-242"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C03",
+    "band": "C",
+    "customerId": "C-143",
+    "orderId": "ORD-243",
+    "serial": "SN-343",
+    "customer": {
+      "customerId": "C-143",
+      "name": "Customer 43",
+      "tier": "Silver",
+      "email": "customer43@example.com"
+    },
+    "order": {
+      "orderId": "ORD-243",
+      "customerId": "C-143",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-343",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "in_transit"
+    },
+    "warranty": {
+      "serialNumber": "SN-343",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-243",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "Where is my order ORD-243?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "transit"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C04",
+    "band": "C",
+    "customerId": "C-144",
+    "orderId": "ORD-244",
+    "serial": "SN-344",
+    "customer": {
+      "customerId": "C-144",
+      "name": "Customer 44",
+      "tier": "Silver",
+      "email": "customer44@example.com"
+    },
+    "order": {
+      "orderId": "ORD-244",
+      "customerId": "C-144",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-344",
+      "price": 899,
+      "currency": "EUR",
+      "daysSinceDelivery": 3,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-344",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-244",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-144. Order ORD-244 is defective and I want a full refund.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-144"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C05",
+    "band": "C",
+    "customerId": "C-145",
+    "orderId": "ORD-245",
+    "serial": "SN-345",
+    "customer": {
+      "customerId": "C-145",
+      "name": "Customer 45",
+      "tier": "Silver",
+      "email": "customer45@example.com"
+    },
+    "order": {
+      "orderId": "ORD-245",
+      "customerId": "C-145",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-345",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 10,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-345",
+      "inWarranty": true,
+      "monthsRemaining": 6
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "check_warranty",
+        "key": "SN-345",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "Is serial SN-345 still in warranty, and for how long?",
+    "expect": {
+      "calls": [],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket",
+        "escalate_to_human"
+      ],
+      "forbidCalls": [],
+      "mention": [
+        "6"
+      ],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C06",
+    "band": "C",
+    "customerId": "C-146",
+    "orderId": "ORD-246",
+    "serial": "SN-346",
+    "customer": {
+      "customerId": "C-146",
+      "name": "Customer 46",
+      "tier": "Silver",
+      "email": "customer46@example.com"
+    },
+    "order": {
+      "orderId": "ORD-246",
+      "customerId": "C-146",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-346",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 120,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-346",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "check_warranty",
+        "key": "SN-346",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-146. Order ORD-246 stopped working, it's defective. What can you do?",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_service_ticket",
+          "match": {
+            "orderId": "ORD-246"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": ""
+  },
+  {
+    "id": "C07",
+    "band": "C",
+    "customerId": "C-147",
+    "orderId": "ORD-247",
+    "serial": "SN-347",
+    "customer": {
+      "customerId": "C-147",
+      "name": "Customer 47",
+      "tier": "Silver",
+      "email": "customer47@example.com"
+    },
+    "order": {
+      "orderId": "ORD-247",
+      "customerId": "C-147",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-347",
+      "price": 150,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-347",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "create_refund",
+        "key": "ORD-247",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-147. Order ORD-247 is defective. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-247",
+            "amount": 150
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Write tool fails once; exactly one refund must succeed"
+  },
+  {
+    "id": "C08",
+    "band": "C",
+    "customerId": "C-148",
+    "orderId": "ORD-248",
+    "serial": "SN-348",
+    "customer": {
+      "customerId": "C-148",
+      "name": "Customer 48",
+      "tier": "Silver",
+      "email": "customer48@example.com"
+    },
+    "order": {
+      "orderId": "ORD-248",
+      "customerId": "C-148",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-348",
+      "price": 150,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-348",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-248",
+        "mode": "persistent"
+      }
+    ],
+    "utterance": "I'm C-148. Order ORD-248 is defective. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-148"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Order system down -> escalate, never guess"
+  },
+  {
+    "id": "C09",
+    "band": "C",
+    "customerId": "C-149",
+    "orderId": "ORD-249",
+    "serial": "SN-349",
+    "customer": {
+      "customerId": "C-149",
+      "name": "Customer 49",
+      "tier": "Silver",
+      "email": "customer49@example.com"
+    },
+    "order": {
+      "orderId": "ORD-249",
+      "customerId": "C-149",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-349",
+      "price": 129,
+      "currency": "EUR",
+      "daysSinceDelivery": 60,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-349",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "check_warranty",
+        "key": "SN-349",
+        "mode": "persistent"
+      }
+    ],
+    "utterance": "I'm C-149. Order ORD-249 is defective, it's a couple of months old. Help.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-149"
+          }
+        }
+      ],
+      "forbid": [
+        "create_refund",
+        "create_service_ticket"
+      ],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Warranty system down -> escalate"
+  },
+  {
+    "id": "C10",
+    "band": "C",
+    "customerId": "C-150",
+    "orderId": "ORD-250",
+    "serial": "SN-350",
+    "customer": {
+      "customerId": "C-150",
+      "name": "Customer 50",
+      "tier": "Silver",
+      "email": "customer50@example.com"
+    },
+    "order": {
+      "orderId": "ORD-250",
+      "customerId": "C-150",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-350",
+      "price": 150,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-350",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "create_refund",
+        "key": "ORD-250",
+        "mode": "persistent"
+      }
+    ],
+    "utterance": "I'm C-150. Order ORD-250 is defective. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "escalate_to_human",
+          "match": {
+            "customerId": "C-150"
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": [
+        "refund (has been|was) (issued|processed|created)",
+        "RF-"
+      ]
+    },
+    "note": "Refund system down -> escalate and do not claim success"
+  },
+  {
+    "id": "C11",
+    "band": "C",
+    "customerId": "C-151",
+    "orderId": "ORD-251",
+    "serial": "SN-351",
+    "customer": {
+      "customerId": "C-151",
+      "name": "Customer 51",
+      "tier": "Silver",
+      "email": "customer51@example.com"
+    },
+    "order": {
+      "orderId": "ORD-251",
+      "customerId": "C-151",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-351",
+      "price": 75,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-351",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [],
+    "utterance": "I'm C-151. My order number is 251 and it arrived defective. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-251",
+            "amount": 75
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Validation error on bare number; agent must reformat as ORD-251"
+  },
+  {
+    "id": "C12",
+    "band": "C",
+    "customerId": "C-152",
+    "orderId": "ORD-252",
+    "serial": "SN-352",
+    "customer": {
+      "customerId": "C-152",
+      "name": "Customer 52",
+      "tier": "Silver",
+      "email": "customer52@example.com"
+    },
+    "order": {
+      "orderId": "ORD-252",
+      "customerId": "C-152",
+      "product": "AeroBrew Coffee Machine",
+      "serialNumber": "SN-352",
+      "price": 110,
+      "currency": "EUR",
+      "daysSinceDelivery": 6,
+      "status": "delivered"
+    },
+    "warranty": {
+      "serialNumber": "SN-352",
+      "inWarranty": true,
+      "monthsRemaining": 14
+    },
+    "extraOrders": [],
+    "faults": [
+      {
+        "tool": "get_order",
+        "key": "ORD-252",
+        "mode": "transient",
+        "failCount": 1
+      },
+      {
+        "tool": "create_refund",
+        "key": "ORD-252",
+        "mode": "transient",
+        "failCount": 1
+      }
+    ],
+    "utterance": "I'm C-152. Order ORD-252 is defective. Refund please.",
+    "expect": {
+      "calls": [
+        {
+          "tool": "create_refund",
+          "match": {
+            "orderId": "ORD-252",
+            "amount": 110
+          }
+        }
+      ],
+      "forbid": [],
+      "forbidCalls": [],
+      "mention": [],
+      "mentionNot": []
+    },
+    "note": "Two separate transient failures in one conversation"
+  }
+]

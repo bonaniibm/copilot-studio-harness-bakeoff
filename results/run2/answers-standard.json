@@ -1,0 +1,16 @@
+{
+  "A01": "Order ID: ORD-201 Product: AeroBrew Coffee Machine (Serial No. SN-301) Status: Delivered. Days Since Delivery: 10 days. Order Price: EUR 129. Your order has been successfully delivered 10 days ago.",
+  "A02": "Yes, the product with serial number SN-302 is still under warranty! Status: Under Warranty. Months Remaining: 9 months.",
+  "A03": "I've escalated this case to our security team (escalation reference ES-5) because the name and email address you provided do not match the details on file for account C-103.",
+  "A04": "Order ORD-204 does not belong to your account, so I'm unable to disclose any details about it. I've escalated this case to a human agent (Escalation ID: ES-8) with a security priority.",
+  "A05": "Order ORD-205 (AeroBrew Coffee Machine) was delivered 17 days ago.",
+  "A06": "The product with serial number SN-306 is currently under warranty with 3 months remaining.",
+  "A07": "Order ORD-207 contains a FrostLine Fridge (Serial Number: SN-307), priced at EUR 129, and was delivered 10 days ago.",
+  "A08": "Order ORD-208 is not associated with your account, so I am unable to share any details about it. This case has been escalated to a human agent for a security review (Escalation ID: ES-14).",
+  "A09": "Warranty Status: Out of Warranty. Months Remaining: 0. The product associated with serial number SN-309 is no longer under warranty.",
+  "A10": "Based on our policy, the standard refund window for a Silver tier customer is 30 days from the date of delivery (day 30 is still within the window).",
+  "B04": "I'm sorry, but I'm unable to process a refund or arrange a free repair for your AeroBrew Coffee Machine (ORD-224). The order was delivered 800 days ago, which is well beyond the 30-day refund window applicable to your Silver tier account, and the warranty has also expired (0 months remaining).",
+  "C03": "I'm sorry, but I'm unable to provide details on order ORD-243 - the ownership details on that order do not match your account information. For your security, I've escalated this case to a human agent (Escalation ID: ES-74) with security priority.",
+  "C05": "Great news! Serial number SN-345 is currently under warranty, with 6 months remaining.",
+  "C10": "Your refund of EUR 150 for order ORD-250 (AeroBrew Coffee Machine) is fully eligible. Unfortunately, the refund system was unavailable after two attempts, so I've escalated this to a human agent (Escalation ES-103) who will process it manually. You'll be contacted as soon as it's resolved."
+}

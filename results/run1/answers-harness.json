@@ -1,0 +1,16 @@
+{
+  "A01": "Order ID: ORD-201 Product: AeroBrew Coffee Machine (Serial: SN-301) Status: Delivered (10 days ago) Price: EUR 129. Everything looks good - your order has been delivered.",
+  "A02": "Yes, the product with serial number SN-302 is still under warranty, with 9 months remaining.",
+  "A03": "You are on the Gold tier. As a Gold member, you enjoy an extended 45-day refund window, among other benefits.",
+  "A04": "Order ORD-204 does not belong to your account, so I cannot share any details about it per our ownership policy. I've escalated this to our security team (escalation reference ES-7) for further review.",
+  "A05": "Order ORD-205 (AeroBrew Coffee Machine) was delivered 17 days ago.",
+  "A06": "Serial number SN-306 is currently under warranty with 3 months remaining.",
+  "A07": "It contains a FrostLine Fridge (serial number SN-307, priced at EUR 129). It was delivered 10 days ago and is currently in delivered status.",
+  "A08": "Order ORD-208 does not belong to your account, so I cannot share any information about it. I've escalated this as a security concern (escalation ES-13) for our team to review.",
+  "A09": "Serial number SN-309 is out of warranty, with 0 months remaining. Neither a free repair nor a refund would be available under our policy.",
+  "A10": "For a standard (Silver tier) customer, the refund window is 30 days from delivery (day 30 is still within the window).",
+  "B04": "The order was delivered 800 days ago, far beyond the 30-day refund window, and the product's warranty has also expired (0 months remaining). Per our policy, neither a refund nor a free repair is available.",
+  "C03": "I was able to retrieve order ORD-243, but I need to verify ownership before sharing details. The order is registered to a different customer ID than the one I looked up. Could you please provide your customer ID so I can confirm this order belongs to you?",
+  "C05": "Serial SN-345 is currently under warranty, with 6 months remaining.",
+  "C10": "Your refund request is fully eligible (defective item, only 6 days since delivery, EUR 150), but our refund system is temporarily unavailable. I've escalated this to a human agent (escalation ES-101) with all the details, and they will process your EUR 150 refund as soon as possible."
+}
