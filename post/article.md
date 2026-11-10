@@ -12,13 +12,13 @@ I built the same customer service agent on both harnesses and ran it through the
 
 **One agent, built twice.** A customer service agent for a fictional appliance retailer. It handles order, refund and warranty requests under an eight-rule policy: who owns the order, a 30-day refund window (45 for Gold customers), a EUR 500 approval limit, what to do when a system is down. Both agents got the same instructions word for word, the same model (Claude Sonnet 4.6), and no knowledge sources.
 
-![Figure 3. The Copilot harness agent: instructions, model and the single MCP tool.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/harness-agent-setup.jpg)
+![Figure 2. The Copilot harness agent: instructions, model and the single MCP tool.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/harness-agent-setup.jpg)
 
-![Figure 4. The Standard harness agent with the same instructions and model.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/standard-agent-setup.jpg)
+![Figure 3. The Standard harness agent with the same instructions and model.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/standard-agent-setup.jpg)
 
 **One backend, six tools.** Both agents call the same mock service through an MCP server: look up a customer, look up an order, check a warranty, issue a refund, open a repair ticket, escalate to a human. The backend can fail on purpose. For chosen orders, a tool fails once and then works, or fails every time.
 
-![Figure 2. How the bake-off is wired. Each agent calls the same mock backend through its own route, and scoring reads the backend log.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/architecture.png)
+![Figure 4. How the bake-off is wired. Each agent calls the same mock backend through its own route, and scoring reads the backend log.](https://raw.githubusercontent.com/bonaniibm/copilot-studio-harness-bakeoff/main/docs/architecture.png)
 
 **36 test cases in three bands.**
 
